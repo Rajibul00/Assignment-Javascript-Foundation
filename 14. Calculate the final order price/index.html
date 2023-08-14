@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart Total Cost Calculator</title>
+  <link rel="stylesheet" type="text/css" href=".\style.css">
+</head>
+<body>
+  <h1>Cart Total Cost Calculator</h1>
+  <div class="cart">
+    <label for="unit-price">Unit Price:</label>
+    <input type="number" id="unit-price" placeholder="Enter unit price">
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" placeholder="Enter quantity">
+
+    <button onclick="addToCart()">Add to Cart</button>
+
+    <h2>Cart</h2>
+    <ul id="cart-items"></ul>
+
+    <p id="total-cost">Total Cost: <span id="cost"></span></p>
+  </div>
+
+  <script src=".\file.js"></script>
+</body>
+</html>

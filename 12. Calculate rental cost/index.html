@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Car Rental Cost Calculator</title>
+  <link rel="stylesheet" type="text/css" href=".\style.css">
+</head>
+<body>
+  <h1>Car Rental Cost Calculator</h1>
+  <div class="calculator">
+    <label for="car-type">Car Type:</label>
+    <select id="car-type">
+      <option value="economy">Economy</option>
+      <option value="midsize">Midsize</option>
+      <option value="luxury">Luxury</option>
+    </select>
+
+    <label for="rental-days">Rental Days:</label>
+    <input type="number" id="rental-days" placeholder="Enter number of rental days">
+
+    <button onclick="calculateCost()">Calculate</button>
+    <p id="result"></p>
+  </div>
+
+ 
+
+    <script src=".\file.js"></script>
+</body>
+</html>

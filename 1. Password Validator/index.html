@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validator</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   
+        <label for="p">Password</label> : 
+        <input type="password" name="" id="password"> 
+        <br><br>
+        <label for="cp">Confirm Password</label> : 
+        <input type="password" name="" id="confirmpassword"> 
+        <button onclick="sub()">
+            Submit
+        </button>
+        </form>
+        <script>
+            let password= document.getElementById('password')
+let confirmpassword = document.getElementById('confirmpassword');
+let sub=()=>{
+    if(password.value==""){
+        console.log("Please Enter The Password First");
+    }
+    else if(password.value==confirmpassword.value){
+        console.log( "Password Matched");
+    }
+    else{
+console.log("Password didn't match. Password validation unsuccessful" );
+    }
+}
+
+        </script>
+</body>
+</html>

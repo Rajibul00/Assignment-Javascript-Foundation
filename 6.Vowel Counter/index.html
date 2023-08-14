@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+</head>
+<body>
+    <script>
+        function countVowels(name) {
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+  var count = 0;
+  
+  for (var i = 0; i < name.length; i++) {
+    var char = name.charAt(i).toLowerCase();
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+  
+  return count;
+}
+
+// Example usage:
+var name = prompt("Enter a name:");
+var numVowels = countVowels(name);
+console.log("Number of vowels in the name:", numVowels);
+
+    </script>
+</body>
+</html>

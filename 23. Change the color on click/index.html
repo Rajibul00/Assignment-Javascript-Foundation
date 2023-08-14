@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unlimited Background Color Changer</title>
+<style>
+  body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+<button id="colorChangeBtn">Change Background Color</button>
+<script>
+  const colorChangeBtn = document.getElementById('colorChangeBtn');
+
+  function generateRandomColor() {
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+    return randomColor;
+  }
+
+  function changeBackgroundColor() {
+    const randomColor = generateRandomColor();
+    document.body.style.backgroundColor = randomColor;
+  }
+
+  colorChangeBtn.addEventListener('click', changeBackgroundColor);
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    #random-number-display {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#random-number {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#generate-button {
+  margin-top: 10px;
+}
+
+</style>
+  <title>Random Number Generator</title>
+</head>
+<body>
+  <div id="random-number-display">
+    <p>Random Number: <span id="random-number">Generating...</span></p>
+    <button id="generate-button">Generate Random Number</button>
+  </div>
+  <script>
+    const randomNumberDisplay = document.getElementById("random-number");
+const generateButton = document.getElementById("generate-button");
+
+const generateRandomNumber = () => {
+  const randomNumber = Math.floor(Math.random() * 100) + 1;
+  randomNumberDisplay.textContent = randomNumber;
+};
+
+generateButton.addEventListener("click", generateRandomNumber);
+
+// Generate a random number when the program starts
+generateRandomNumber();
+
+  </script>
+</body>
+</html>

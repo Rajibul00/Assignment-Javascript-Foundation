@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           text-align: center;
+           font-size: x-large;
+           font-weight: bolder;
+        }
+        input{
+            font-size: large;
+        
+        }
+        #details,#balance{
+            font-size:large;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+<label for="">Please Enter Customer's Name :</label>
+<input type="text" id="customername">
+<button onclick="sub()">Submit</button>
+<!--Next Line-->
+<p>Customer's Details will appear here</p>
+<p id="details"></p>
+<p id="balance"></p>
+<!--Withdraw-->
+<label for="">How much you want to withdraw :</label>
+<input type="text" id="withdraw">
+<button onclick="secondsub()">Submit</button>
+<p>Final Balance<span id="fb"></span></p>
+    <script src=".\file.js"></script>
+</body>
+</html>

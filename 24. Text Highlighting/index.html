@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highlight Words in Paragraph</title>
+  <style>
+    .highlight > span {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p class="highlight">This is a paragraph with some words that are longer than 8 characters.</p>
+  <script>
+    function highlightWords() {
+      const paragraph = document.querySelector('.highlight');
+      const words = paragraph.textContent.split(' ');
+      for (let i = 0; i < words.length; i++) {
+        if (words[i].length > 8) {
+          const span = document.createElement('span');
+          span.textContent = words[i];
+          paragraph.appendChild(span);
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', highlightWords);
+  </script>
+</body>
+</html>

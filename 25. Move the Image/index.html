@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    #moving-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  width: 50vw;
+}
+
+</style>
+  <title>Image Movement</title>
+</head>
+<body>
+  <img id="moving-image" src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000" alt="Moving Image">
+<script>
+    const image = document.getElementById("moving-image");
+let currentTop = 0;
+let currentLeft = 0;
+const step = 10; // Adjust this value to control the step size of movement
+
+document.addEventListener("keydown", function(event) {
+  switch (event.key) {
+    case "ArrowUp":
+      currentTop -= step;
+      break;
+    case "ArrowDown":
+      currentTop += step;
+      break;
+    case "ArrowLeft":
+      currentLeft -= step;
+      break;
+    case "ArrowRight":
+      currentLeft += step;
+      break;
+  }
+
+  image.style.top = currentTop + "px";
+  image.style.left = currentLeft + "px";
+});
+
+</script>
+</body>
+</html>
